@@ -4,22 +4,28 @@
 // --- Examples
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
-let str = 'apple 1231111'
-let char = {}
+let str = 'appppppple 1231111'
 
 function maxChar(str) {
-    let max = 1;
-    let maxnumber = 1;
-    for(let i of str) {
-        char[i] = char[i] + 1 || 1;
-        if (maxnumber < char[i]) {
-            maxnumber = char[i]
-            max = Object.keys(char).find(key => char[key] == char[i])
+    let charMap = {}
+    let max = 0;
+    let maxChar = ''
+    for(let char of str) {
+        if(!charMap[char]) {
+            charMap[char] = 1;
+        }else {
+            charMap[char]++
         }
     }
-    return max;
+    for(let char in charMap) {
+        if(max < charMap[char]) {
+            max = charMap[char]
+            maxChar = char;
+        }
+    }
+    console.log(maxChar)
 }
-console.log(maxChar(str))
+maxChar(str)
 
 //console.log(char)
 
