@@ -6,6 +6,13 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {}
+function reverse(str) {
+   return str.split('').reduce((rev,char) => {
+        return char + rev;
+   }, '')
+} 
+
 
 module.exports = reverse;
+//npm run test 
+// npm run test reversestring/test.js --watch  --FOR Single file

@@ -1,0 +1,8 @@
+arr.reduce((initialvalue,currentvalue) {
+    return initialvalue + currentvalue;
+}, '')
+
+string.split('')  -- to convert into array
+string.join('') -- convert back to string
+array.reverse()
+arr.every((cur,ind,arr))  -- return boolean value;
