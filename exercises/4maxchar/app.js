@@ -1,16 +1,22 @@
-/**let str = 'abcccccd'
-let char = {}
+let str = 'assfsdddddbccd'
 
 function maxChar(str) {
-    for(let i of str) {
-        if (!char[i]) {
-            char[i] = 1
-        }else {
-            char[i]++
+    let char = {}
+    let max = 1
+    let maxchar = ''
+    for (let i of str) {
+        char[i] = char[i] + 1 || 1; 
+        if (max < char[i]) {
+            max = char[i]
+            maxchar = i
         }
     }
+    console.log(char)
+    console.log(max)
+    return maxchar
+    
 }
-maxChar(str) */
+console.log(maxChar(str))
 
 /**function maxChar(str) {
     for(let i of str) {
@@ -49,3 +55,13 @@ function maxChar(str) {
     return max;
 }
 console.log(maxChar(str))*/
+
+
+// let arr = [1,10,3] //[2,4,6,8,10]
+// let result = []
+
+// for(i=arr[0]; i<=arr[1]; i=i+arr[2]) {
+//     result.push(i)
+// }
+// console.log(result);
+// console.log('he')
