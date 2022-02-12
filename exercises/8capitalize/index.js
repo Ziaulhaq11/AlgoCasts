@@ -25,6 +25,14 @@ console.log(capitalize("a lazy fox"));
 module.exports = capitalize;
 
 /**function capitalize(str) {
+  let wordsArr = [];
+  for (let word of str.split(" ")) {
+    wordsArr.push(word[0].toUpperCase() + word.slice(1));
+  }
+  return wordsArr.join(" ");
+} */
+
+/**function capitalize(str) {
   let result;
   for (let i = 0; i < str.length; i++) {
     if (i == 0) {
@@ -38,13 +46,6 @@ module.exports = capitalize;
   return result;
 } */
 
-/**function capitalize(str) {
-  let wordsArr = [];
-  for (let word of str.split(" ")) {
-    wordsArr.push(word[0].toUpperCase() + word.slice(1));
-  }
-  return wordsArr.join(" ");
-} */
 
 /**function capitalize(str) {
   let strArr = [];
