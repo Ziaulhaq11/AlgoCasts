@@ -19,7 +19,8 @@ function maxChar(str) {
         
     }
     console.log(charMap)
-    for(let char in charMap) {
+    for (let char in charMap) {
+        console.log(char)
         if(max < charMap[char]) {
             max = charMap[char]
             maxChar = char;

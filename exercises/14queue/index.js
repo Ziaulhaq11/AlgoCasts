@@ -8,6 +8,19 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
-class Queue {}
+//In Queue we usually create one with some methods like unshift(), pop() etc. Reason for Queue maybe Performance bc not many methods are there.
+
+class Queue {
+  constructor() { //This will be called automatically by the instances
+    this.data = []
+  }
+
+  add(record) {
+    this.data.unshift(record)
+  }
+  remove() {
+    return this.data.pop()
+  }
+} 
 
 module.exports = Queue;

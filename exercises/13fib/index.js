@@ -33,9 +33,9 @@ function slowFib(n) {
 }
 
 const fib = memoize(slowFib)
-console.time()
-console.log(fib(30))
-console.timeEnd()
+console.time('fib')
+console.log(fib(50))
+console.timeEnd('fib')
 
 //Exponentail Run Time. Processing power required doubles.
 /**function fib(n) { 

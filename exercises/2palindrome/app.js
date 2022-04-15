@@ -1,5 +1,5 @@
 
-result = reverse('abbas')
+result = reverse('abba')
 
 function reverse(str) {
     arr = str.split('');

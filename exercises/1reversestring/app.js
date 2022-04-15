@@ -1,7 +1,8 @@
 
 
 function reverse(str) {
-    return str.split('').reduce((reversed,character) => {
+    return str.split('').reduce((reversed, character) => {
+        console.log(reversed,character)
         return  character + reversed;
     }, '');
 }

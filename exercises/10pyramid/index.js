@@ -37,22 +37,27 @@
 // module.exports = pyramid;
 
 function pyramid(n) {
+    // const midpoint = n - 1 -- It will be the same as below
     const midpoint = Math.floor((2 * n - 1) / 2)
     console.log('Midpoint = ' + midpoint)
     for (let row = 0; row < n; row++) {
         let level = "";
         for (let column = 0; column < 2 * n - 1; column++) {
-            console.log(midpoint,row,column)
-            if (midpoint - row <= column && midpoint + row >= column) {
-                level+= '#'
+            console.log(midpoint, row, column)
+            if (midpoint - row <= column && midpoint + row >= column) { //Both conditions has to apply otherwise center will not work
+                console.log('----')
+                console.log(midpoint,row,column)
+                console.log('----')
+
+                level += '#'
             } else {
-                level += "="
+                level += "-"
             }
         }
         console.log(level)
     }
 } 
-pyramid(4);
+pyramid(5);
 
 
 

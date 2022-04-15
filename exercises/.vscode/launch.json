@@ -12,7 +12,7 @@
                 "<node_internals>/**"
             ],
             "Run script" : "test",
-            "program": "${workspaceFolder}\\9steps\\index.js"
+            "program": "${workspaceFolder}\\test.js"
         }
     ]
 }
